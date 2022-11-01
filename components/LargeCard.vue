@@ -1,7 +1,8 @@
 <template>
    <div class="card">
-      <!-- NUXT's way of importing files. @ is for the root directory. From there, you go to assets, then to images and find your respective 
-         image. If that image is not found, then show fe1.jpg -->
+      <!-- NUXT's way of importing files. @ is for the root directory. From there, you go to assets, then to images and find your respective image.
+         If that image is not found, then show fe1.jpg. We are using v-bind since we are looping and creating this component inside index.vue.
+      -->
       <img :src="require(`@/assets/images/${card.image || 'fe1.jpg'}`)" alt="fe" class="image">
       <h3 class="header">{{ card.title }}</h3>
       <p class="snippet">{{ card.snippet }}</p>
